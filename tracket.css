@@ -1,0 +1,134 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20%;
+  width: 80%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.searchbar {
+  background-color: rgba(217, 217, 217, 1);
+  border: none;
+  border-radius: 30px;
+  padding: 1em 4rem;
+  font-size: 0.6rem;
+  width: 80%;
+  text-align: center;
+  outline: none;
+}
+.header__title {
+  font-size: 1.4rem;
+  font-family: roboto;
+  max-width: 3rem;
+  font-weight: bold;
+}
+
+.main {
+  display: flex;
+  gap: 3rem;
+  padding-top: 2em;
+}
+
+
+.currently-watching {
+  display: flex;
+  gap: 1em;
+}
+
+.currently-watching div {
+  width: 100px;
+  height: 150px;
+  border-radius: 0.3em;
+  background-image: url(Rectangle\ 4.svg);
+  background-repeat: round;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.currently-watching div div {
+  color: white;
+  font-family: roboto;
+  opacity: 0;
+  display: hidden;
+  height: 100%;
+}
+.currently-watching div:hover {
+  opacity: 0.7;
+}
+.currently-watching div div:hover {
+  opacity: 1;
+  display: flex;
+  transition: all 0.4s;
+}
+
+.suggestions {
+  display: flex;
+  gap: 0.5rem;
+  overflow: auto;
+  width: 600px;
+}
+
+.suggestions::-webkit-scrollbar {
+  display: none;
+}
+
+.suggestions div {
+  flex-shrink: 0;
+  width: 100px;
+  height: 150px;
+  border-radius: 0.3em;
+  background-image: url(Rectangle\ 4.svg);
+  background-repeat: round;
+  display: flex;
+
+}
+
+.previously-watched {
+  display: flex;
+  gap: 1em;
+  max-width: 100vw;
+  overflow: auto;
+}
+
+.previously-watched::-webkit-scrollbar {
+  display: none;
+}
+
+.previously-watched {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.previously-watched div {
+  flex-shrink: 0;
+  width: 100px;
+  height: 150px;
+  border-radius: 0.3em;
+  background-image: url(Rectangle\ 4.svg);
+  background-repeat: round;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.previously-watched div div {
+    color: white;
+    font-family: roboto;
+    opacity: 0;
+    display: hidden;
+    height: 100%;
+  }
+  .previously-watched div:hover {
+    opacity: 0.7;
+  }
+  .previously-watcheddiv div div:hover {
+    display: flex;
+    opacity: 1;
+    transition: all 0.4s;
+    z-index: 1;
+  } 
