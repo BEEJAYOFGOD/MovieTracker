@@ -15,6 +15,12 @@
 body::-webkit-scrollbar {
   display: none;
 }
+.header__title {
+  font-size: 2.5rem;
+  font-family: roboto;
+  max-width: 3rem;
+  font-weight: bold;
+}
 
 .searchbar {
   background-color: rgba(217, 217, 217, 1);
@@ -22,15 +28,20 @@ body::-webkit-scrollbar {
   border-radius: 30px;
   padding: 1em 4rem;
   font-size: 0.6rem;
-  width: 400px;
+  width: 600px;
+  font-size: 1rem;
   text-align: center;
   outline: none;
+
 }
-.header__title {
-  font-size: 2.5rem;
-  font-family: roboto;
-  max-width: 3rem;
-  font-weight: bold;
+.searchbar::placeholder{
+  color: black;
+}
+
+div:has(.searchbar) {
+  width: 30000px;
+  display: flex;
+  justify-content: center;
 }
 
 .main {

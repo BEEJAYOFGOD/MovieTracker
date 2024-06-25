@@ -1,3 +1,6 @@
+body{
+    padding: 2rem;
+}
 .header {
   display: flex;
   flex-direction: row;
@@ -17,6 +20,9 @@
   text-align: center;
   outline: none;
 }
+.searchbar::placeholder{
+    color: black;
+  }
 
 div:has(.searchbar) {
   width: 30000px;
@@ -28,4 +34,9 @@ div:has(.searchbar) {
   font-family: roboto;
   max-width: 3rem;
   font-weight: bold;
+}
+
+.idk{
+    display: flex;
+    justify-content: space-between;
 }
