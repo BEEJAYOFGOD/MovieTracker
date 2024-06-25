@@ -22,12 +22,12 @@ body::-webkit-scrollbar {
   border-radius: 30px;
   padding: 1em 4rem;
   font-size: 0.6rem;
-  width: 80%;
+  width: 400px;
   text-align: center;
   outline: none;
 }
 .header__title {
-  font-size: 1.4rem;
+  font-size: 2.5rem;
   font-family: roboto;
   max-width: 3rem;
   font-weight: bold;
@@ -51,7 +51,7 @@ body::-webkit-scrollbar {
   margin-top: rem;
   margin-bottom: 2%;
 }
-.p:nth-child(3){
+.p:nth-child(3) {
   margin-top: 5%;
   margin-bottom: 1%;
 }
