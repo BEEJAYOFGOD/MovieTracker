@@ -23,7 +23,7 @@ fetch(
       const movieId = item.id;
       const imgLocation = `https://image.tmdb.org/t/p/w300/${poster}`;
       const viewPercent = "62%";
-      const movie = `<li id=${movieId}><img src=${imgLocation}><p>${viewPercent}</p></li>`;
+      const movie = `<li class="movies" id=${movieId}><img src=${imgLocation}><p>${viewPercent}</p></li>`;
 
       document.querySelector(".currently-watching").innerHTML += movie;
       console.log(item);
@@ -60,7 +60,7 @@ fetch(
           const poster = suggestion.poster_path;
           const movieId = suggestion.id;
           const imgLocation = `https://image.tmdb.org/t/p/w300/${poster}`;
-          const movie = `<li id=${movieId}><img src=${imgLocation}> </li>`;
+          const movie = `<li class="movies" id=${movieId}><img src=${imgLocation}> </li>`;
 
           document.querySelector(".suggestions").innerHTML += movie;
         });
@@ -92,7 +92,7 @@ fetch(
       const poster = item.poster_path;
       const movieId = item.id;
       const imgLocation = `https://image.tmdb.org/t/p/w300/${poster}`;
-      const movie = `<li id=${movieId}><img src=${imgLocation}><p>${viewPercent}</p> </li>`;
+      const movie = `<li class="movies" id=${movieId}><img src=${imgLocation}><p>${viewPercent}</p> </li>`;
 
       document.querySelector(".previously-watched").innerHTML += movie;
     });

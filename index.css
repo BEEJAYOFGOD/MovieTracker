@@ -1,0 +1,68 @@
+body {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  font-family: haken;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 3rem;
+  max-width: 4.5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input.inputfield {
+  color: black;
+  background-color: rgba(217, 217, 217, 1);
+  padding: 5px 10px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  border: 5px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.02s;
+  border: none;
+}
+
+input[type="submit"] {
+  background-color: rgba(55, 198, 243, 1);
+  border: none;
+  color: white;
+  border-radius: 30px;
+  padding: 5px 10px;
+}
+
+.inputfield:focus {
+  border: 3px solid blue;
+  border-radius: 30px;
+  outline: none;
+}
+
+.login-info {
+  font-family: "Roboto";
+  color: rgba(109, 109, 109, 1);
+  font-size: 0.6em;
+  font-weight: 400;
+}
+
+.login-info a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.error-text {
+  display: none;
+  font-size: 0.5em;
+  margin: 1em 0 0;
+  color: rgb(211, 37, 37);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
