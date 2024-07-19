@@ -1,5 +1,5 @@
-body{
-    padding: 2rem;
+body {
+  padding: 2rem;
 }
 .header {
   display: flex;
@@ -20,9 +20,9 @@ body{
   text-align: center;
   outline: none;
 }
-.searchbar::placeholder{
-    color: black;
-  }
+.searchbar::placeholder {
+  color: black;
+}
 
 div:has(.searchbar) {
   width: 30000px;
@@ -36,33 +36,42 @@ div:has(.searchbar) {
   font-weight: bold;
 }
 
-.idk{
-    display: flex;
-    justify-content: space-between;
+.idk {
+  display: flex;
+  justify-content: space-between;
 }
 
-.movie-info{
-    display: flex;
-    width: 400px;
-    gap: 2rem;
+.movie-info {
+  display: flex;
+  width: 400px;
+  gap: 2rem;
 }
-.ratings{
-    display: flex;
-    border: 1px solid red;
-    align-items: center;
-    line-height: 0.2rem;
-}
-
-.overview{
-    min-width: 400px;
-
-}
-section{
-    display: flex;
-    justify-content: space-between;
+.ratings {
+  display: flex;
+  border: 1px solid red;
+  align-items: center;
+  line-height: 0.2rem;
 }
 
-video{
-    border-radius: 12px;
-    margin-top: 1rem;
+.overview {
+  min-width: 400px;
+}
+section {
+  display: flex;
+  justify-content: space-between;
+}
+
+video {
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.poster-container img {
+  width: 200px;
+  border-radius: 20px;
+}
+
+.tola {
+  width: 300px;
+  border: 1px solid red;
 }
