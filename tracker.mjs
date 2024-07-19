@@ -16,7 +16,7 @@ const shuffle = (array) => {
   return array;
 };
 
-function createmovie(movieArray, className, viewPercent = 0) {
+export function createmovie(movieArray, className, viewPercent = 0) {
   movieArray.map((item) => {
     const poster = item.poster_path;
     const movieId = item.id;
@@ -27,7 +27,7 @@ function createmovie(movieArray, className, viewPercent = 0) {
       viewPercent > 0
         ? `<li class="movies" id=${movieId}><a href="movie-info.html?id=${movieId}"><img src=${imgLocation}><p>${viewPercent}%</p></a></li>`
         : `<li class="movies" id=${movieId}><a href="movie-info.html?id=${movieId}"><img src="${imgLocation}"></a></li>`;
-    // ternary operator to inlude or not include view percent
+
     document.querySelector(className).innerHTML += movie;
   });
 }
@@ -42,7 +42,7 @@ async function getSuggestions() {
   const className = ".suggestions";
 
   const filteredSuggestions = suggestions.filter(
-    (suggestion) => !listCurrent.some((current) => current.id === suggestion.id) // This will filter out movie in current on from suggestions
+    (suggestion) => !listCurrent.some((current) => current.id === suggestion.id)
   );
 
   const shuffledSuggestions = shuffle(filteredSuggestions);
