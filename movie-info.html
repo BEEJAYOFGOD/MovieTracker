@@ -12,7 +12,7 @@
 
       <div>
         <input
-          type="text"
+          type="search"
           placeholder="🔍 search a movie or series "
           class="searchbar"
         />
@@ -22,7 +22,7 @@
     <main>
       <div class="idk">
         <div class="movie-title"></div>
-        <button>
+        <button class="watchlist">
           <img src="bookmark.svg" alt="bookmark" />Add to Watchlist
         </button>
       </div>
@@ -30,15 +30,15 @@
       <section>
         <div class="movie-info">
           <div class="poster-container"></div>
+
           <div>
-            <button>Action</button>
-            <button>SciFi</button>
+            <div class="genres"></div>
 
             <p class="overview"></p>
             <div class="ratings">
               <div>
                 <p>IMDB rating</p>
-                <p>9.1/10</p>
+                <p>⭐9.1/10</p>
               </div>
               <div>
                 <p>8k review</p>
@@ -47,7 +47,17 @@
           </div>
         </div>
         <a href="movie-info.html"></a>
-        <div id="trailer-container">
+
+        <div id="trailer-container" style="border-radius: 300px">
+          <iframe
+            id="frame"
+            src
+            width="560"
+            height="315"
+            border-radius="50px"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
           <!-- <video id="trailer" width="400" height="440" controls></video> -->
         </div>
       </section>

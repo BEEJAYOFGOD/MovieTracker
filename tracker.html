@@ -11,14 +11,15 @@
       <div class="header__title">The Movie Tracker</div>
       <div>
         <input
-          type="text"
+          type="search"
           placeholder="🔍 search a movie or series "
           class="searchbar"
+          data-search
         />
       </div>
     </header>
 
-    <div class="main">
+    <div class="main hide">
       <div>
         <p class="p">Currently Watching</p>
         <div class="currently-watching"></div>
@@ -32,9 +33,17 @@
     </div>
 
     <!--- Previously watched-->
-    <p class="p">Previously Watched</p>
-    <div class="previously-watched"></div>
-  
+    <div class="hhah hide" id="stubborn">
+      <p class="p">Previously Watched</p>
+      <div class="previously-watched"></div>
+    </div>
+
+    <div id="searched-movies" data-searched-movies>
+      <template data-search-movie>
+        <div></div>
+      </template>
+    </div>
   </body>
   <script src="tracker.js"></script>
+  <!-- <script src="search.js"></script> -->
 </html>

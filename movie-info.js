@@ -21,6 +21,7 @@ async function getMovie() {
 
   const movieData = await resp.json();
   movie_title.innerHTML += movieData.title;
+  const genres = movieData.genres;
 
   let poster = document.createElement("img");
   const overview = document.querySelector(".overview");
@@ -32,6 +33,12 @@ async function getMovie() {
   poster.setAttribute("src", poster_path);
 
   document.querySelector(".poster-container").appendChild(poster);
+
+  genres.map((genre) => {
+    let btn = `<button>${genre.name}</button>`;
+    document.querySelector(".genres").innerHTML += btn;
+  });
+
   console.log(movieData);
 }
 
@@ -45,25 +52,22 @@ async function getTrailer() {
     );
 
     let trailerData = await resp.json();
+    const iframe = document.querySelector("#frame");
     let trailerData_info = trailerData.results;
     let ytPath;
 
     trailerData_info.forEach((trailer) => {
-      if (trailer.name === "Official Trailer") {
+      if (trailer.type === "Trailer") {
         ytPath = trailer.key;
       }
     });
 
-    const trailerUrl = `https://www.youtube.com/watch?v=${ytPath}`; // YouTube embed URL
-    const videoContainer = document.querySelector("#trailer-container"); // Assuming you have a container for the video
+    const trailerUrl = `http://www.youtube.com/embed/${ytPath}`; // YouTube embed URL
 
-    const iframe = document.createElement("iframe");
     iframe.setAttribute("src", trailerUrl);
-    iframe.setAttribute("frameborder", "0"); // Remove frame border
-    iframe.setAttribute("allowfullscreen", "true"); // Allow fullscreen mode
-    iframe.setAttribute("allow", "autoplay; encrypted-media"); // Allow autoplay (optional)
+    iframe.setAttribute("allow", "autoplay"); // Allow autoplay (optional)
 
-    videoContainer.appendChild(iframe);
+    console.log(trailerData_info);
   } catch (error) {
     console.error(error);
   }

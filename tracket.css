@@ -15,6 +15,10 @@
 body::-webkit-scrollbar {
   display: none;
 }
+body {
+  background: #232529;
+  color: #e2e3e7;
+}
 .header__title {
   font-size: 2.5rem;
   font-family: roboto;
@@ -28,11 +32,13 @@ body::-webkit-scrollbar {
   border-radius: 30px;
   padding: 1em 4rem;
   font-size: 0.6rem;
-  width: 600px;
+  /* max-width: 100px; */
+  width: 300px;
   font-size: 1rem;
   text-align: center;
   outline: none;
 }
+
 .searchbar::placeholder {
   color: black;
 }
@@ -183,4 +189,28 @@ div:has(.searchbar) {
   font-family: "roboto";
   transition: all 0.4s;
   text-align: center;
+}
+
+#searched-movies {
+  display: grid;
+  /* height: 900px; */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* border: 1px solid red; */
+  gap: 0rem;
+  padding: 0 auto;
+  justify-items: center;
+  /* width: 100%; */
+  padding: 0;
+}
+
+#searched-movies div {
+  /* border: 1px solid red; */
+  /* width: 150px; */
+  height: 300px;
+  width: 200px;
+  border-radius: 12px;
+}
+
+.clear {
+  display: none;
 }
