@@ -115,38 +115,24 @@ getCurrent();
 let searchMovieTemplate = document.querySelector("[data-search-movie]");
 let searchedMoviesContainer = document.querySelector("[data-searched-movies]");
 
-// for (i = 0; i < 5; i++) {
-//   movieDIv = searchMovieTemplate.content.children[0].cloneNode(true);
-//   searchedMoviesContainer.append(movieDIv);
-// }
-
-let para = document.createElement("p");
-let ppp = document.createElement("p");
-para.textContent = "Adedamola";
-ppp.textContent = "Olamide";
-// document.body.append(para);
-
 let search = document.querySelector("[data-search]");
 let searchQuery;
 
 search.addEventListener("input", async (e) => {
   searchQuery = e.target.value;
 
-  searchedMoviesContainer.innerHtml = null;
-
   try {
     let searchResponse = await fetch(
       `https://api.themoviedb.org/3/search/movie?query=${searchQuery}&include_adult=false&language=en-US&page=1`,
       options
     );
+
     const searchJson = await searchResponse.json();
 
     let searchResults = searchJson.results;
     searchedMoviesContainer.textContent = "";
 
-    console.log(searchResults);
-
-    //*** This is the beginning of the search  that hides every other component on the page when one search*/
+    //*** This is the beginning of the search  that hides every other component on the page when one search for a mv*/
     document
       .querySelector(".hide")
       .classList.toggle("clear", searchResults.length > 0);
@@ -155,7 +141,37 @@ search.addEventListener("input", async (e) => {
       .classList.toggle("clear", searchResults.length > 0);
     //** End of code
 
+    let errorText = document.createElement("div");
+
+    if (searchResults.length == 0 && searchQuery.length > 0) {
+      // if search results is empty and there's a query (whether empty or not)
+      document.querySelector(".hide").classList.toggle("clear");
+      document.querySelector("#stubborn").classList.toggle("clear");
+      // the toggle clears the page to show the error text
+      errorText.innerHTML =
+        "<p>Oops</p>" +
+        `<img src ="images/look.gif"/>` +
+        "<p>Wetin you dey find??</p>";
+      searchedMoviesContainer.style.display = "flex";
+      searchedMoviesContainer.style.justifyContent = "center";
+      errorText.setAttribute("id", "error-text");
+
+      // errorText.style.display = "flex";
+      // errorText.style.textAlign = "center";
+      // errorText.style.justifyContent = "center";
+      // errorText.style.gap = "1em";
+      // searchedMoviesContainer.style.display = "flex";
+      // searchedMoviesContainer.style.justifyContent = "center";
+      // errorText.style.flexDirection = "column";
+
+      searchedMoviesContainer.append(errorText);
+    } else if (searchQuery.length == 0) {
+      // when the user doesn't input anything on the searchbar
+      // don't disply error text
+      errorText.textContent = "";
+    }
     searchResults.forEach((movie) => {
+      searchedMoviesContainer.style.display = "grid";
       let poster_path = movie.poster_path;
       let imageUrl = `https://image.tmdb.org/t/p/w300/${poster_path}`;
 
@@ -164,6 +180,6 @@ search.addEventListener("input", async (e) => {
       searchedMoviesContainer.append(movieDiv);
     });
 
-    console.log(searchedMoviesContainer.innerHTML);
+    // console.log(searchedMoviesContainer.innerHTML);
   } catch (error) {}
 });

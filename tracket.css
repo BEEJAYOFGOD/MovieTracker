@@ -214,3 +214,14 @@ div:has(.searchbar) {
 .clear {
   display: none;
 }
+/* 
+* {
+  border: 1px solid red;
+} */
+
+#error-text {
+  font-size: 2em;
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
+}
