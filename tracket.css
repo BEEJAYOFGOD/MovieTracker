@@ -193,19 +193,16 @@ div:has(.searchbar) {
 
 #searched-movies {
   display: grid;
-  /* height: 900px; */
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  /* border: 1px solid red; */
-  gap: 0rem;
+  gap: 1rem;
   padding: 0 auto;
   justify-items: center;
-  /* width: 100%; */
+
   padding: 0;
 }
 
 #searched-movies div {
-  /* border: 1px solid red; */
-  /* width: 150px; */
+  background-size: cover;
   height: 300px;
   width: 200px;
   border-radius: 12px;
@@ -214,14 +211,8 @@ div:has(.searchbar) {
 .clear {
   display: none;
 }
-/* 
-* {
-  border: 1px solid red;
-} */
 
 #error-text {
   font-size: 2em;
-  /* display: flex;
-  justify-content: center; */
   text-align: center;
 }

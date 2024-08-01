@@ -116,9 +116,11 @@ let searchMovieTemplate = document.querySelector("[data-search-movie]");
 let searchedMoviesContainer = document.querySelector("[data-searched-movies]");
 
 let search = document.querySelector("[data-search]");
+// search.defaultValue = "";
 let searchQuery;
 
 search.addEventListener("input", async (e) => {
+  search.defaultValue = "";
   searchQuery = e.target.value;
 
   try {
@@ -149,20 +151,12 @@ search.addEventListener("input", async (e) => {
       document.querySelector("#stubborn").classList.toggle("clear");
       // the toggle clears the page to show the error text
       errorText.innerHTML =
-        "<p>Oops</p>" +
+        "<p>Oops!!</p>" +
         `<img src ="images/look.gif"/>` +
-        "<p>Wetin you dey find??</p>";
+        "<p>Wetin you dey find, Ejeh?</p>";
       searchedMoviesContainer.style.display = "flex";
       searchedMoviesContainer.style.justifyContent = "center";
       errorText.setAttribute("id", "error-text");
-
-      // errorText.style.display = "flex";
-      // errorText.style.textAlign = "center";
-      // errorText.style.justifyContent = "center";
-      // errorText.style.gap = "1em";
-      // searchedMoviesContainer.style.display = "flex";
-      // searchedMoviesContainer.style.justifyContent = "center";
-      // errorText.style.flexDirection = "column";
 
       searchedMoviesContainer.append(errorText);
     } else if (searchQuery.length == 0) {
@@ -170,14 +164,23 @@ search.addEventListener("input", async (e) => {
       // don't disply error text
       errorText.textContent = "";
     }
+
     searchResults.forEach((movie) => {
       searchedMoviesContainer.style.display = "grid";
+
       let poster_path = movie.poster_path;
       let imageUrl = `https://image.tmdb.org/t/p/w300/${poster_path}`;
-
+      let movieId = movie.id;
       let movieDiv = document.createElement("div");
+      let movieLink = document.createElement("a");
+      // if (movieId === 1293690)
+
+      movieLink.setAttribute("href", `movie-info.html?id=${movieId}`);
+      movieLink.append(movieDiv);
+
       movieDiv.style.backgroundImage = `url(${imageUrl})`;
-      searchedMoviesContainer.append(movieDiv);
+
+      searchedMoviesContainer.append(movieLink);
     });
 
     // console.log(searchedMoviesContainer.innerHTML);
