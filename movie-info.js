@@ -62,9 +62,9 @@ async function getTrailer() {
       }
     });
 
-    const trailerUrl = `http://www.youtube.com/embed/${ytPath}`; // YouTube embed URL
+    // const trailerUrl = `http://www.youtube.com/embed/${ytPath}`; // YouTube embed URL
 
-    iframe.src = trailerUrl;
+    iframe.src += ytPath;
     iframe.setAttribute("allow", "autoplay"); // Allow autoplay (optional)
 
     console.log(trailerData_info);
