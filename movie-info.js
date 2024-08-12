@@ -64,7 +64,7 @@ async function getTrailer() {
 
     const trailerUrl = `http://www.youtube.com/embed/${ytPath}`; // YouTube embed URL
 
-    iframe.src = "https://example.com";
+    iframe.src = trailerUrl;
     iframe.setAttribute("allow", "autoplay"); // Allow autoplay (optional)
 
     console.log(trailerData_info);
