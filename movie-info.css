@@ -77,10 +77,12 @@ video {
 }
 
 .genres button {
-  border: 1px solid black;
+  border: 5px solid black;
   border-radius: 20px;
   padding: 8px 15px;
   margin-right: 15px;
+  animation: skeleton-loading 2.5s linear infinite alternate;
+  border-width: thick;
 }
 body {
   background: #232529;
@@ -101,4 +103,16 @@ iframe {
   background: rgb(213, 212, 212);
   margin-top: 1em;
   font-weight: bold;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    border: 3px solid hsl(200, 10%, 82%);
+  }
+  50% {
+    border: 3px solid hsl(200, 5%, 66%);
+  }
+  100% {
+    border: 3px solid hsl(210, 1%, 31%);
+  }
 }
