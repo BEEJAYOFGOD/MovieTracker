@@ -18,6 +18,8 @@ const shuffle = (array) => {
   return array;
 };
 
+let listCurrent = [];
+
 // Function to create movie elements and append them to the specified container
 async function createMovie(movieArray, className, viewPercent = 0) {
   movieArray.map(async (item) => {
