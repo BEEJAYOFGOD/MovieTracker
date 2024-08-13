@@ -13,7 +13,9 @@
 }
 
 body::-webkit-scrollbar {
-  display: none;
+  color: red;
+  font-weight: 800;
+  /* display: none; */
 }
 
 body {
@@ -118,14 +120,14 @@ div:has(.searchbar) {
 .suggestions {
   display: flex;
   gap: 02rem;
-  overflow: scroll;
+  overflow: auto;
   flex-wrap: nowrap;
   padding-right: 0px;
   max-width: 55vw;
 }
 
 .suggestions::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 .p {
@@ -153,14 +155,10 @@ div:has(.searchbar) {
   height: 100%;
 }
 
-.previously-watched::-webkit-scrollbar {
-  display: none;
-}
-
 .previously-watched {
   display: flex;
   gap: 02rem;
-  overflow: auto;
+  overflow-x: scroll;
   flex-wrap: nowrap;
   padding-right: 0px;
   width: 98vw;
@@ -213,6 +211,24 @@ div:has(.searchbar) {
   font-family: "roboto";
   transition: all 0.4s;
   text-align: center;
+}
+
+.flex-posters::-webkit-scrollbar {
+  /* background: red; */
+  border-radius: 12px;
+  height: 4px;
+  width: 500px;
+}
+.flex-posters::-webkit-scrollbar-track {
+  /* background: green; */
+  border-radius: 12px;
+}
+.flex-posters::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 5px grey;
+  height: 2px;
+  /* background: yellow; */
+  border-radius: 12px;
+  max-height: 2em;
 }
 
 #searched-movies {
@@ -300,4 +316,22 @@ div:has(.searchbar) {
   .flex-posters li a img {
     max-width: 186px;
   }
+  
+.flex-posters::-webkit-scrollbar {
+  /* background: red; */
+  border-radius: 12px;
+  height: 4px;
+  width: 500px;
+}
+.flex-posters::-webkit-scrollbar-track {
+  /* background: green; */
+  border-radius: 12px;
+}
+.flex-posters::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 5px grey;
+  height: 2px;
+  /* background: yellow; */
+  border-radius: 12px;
+  max-height: 2em;
+}
 }
