@@ -232,8 +232,9 @@ div:has(.searchbar) {
 }
 
 #searched-movies {
+  margin-top: 1em;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 1rem;
   padding: 0 auto;
   justify-items: center;
@@ -337,11 +338,7 @@ div:has(.searchbar) {
     border-radius: 12px;
     max-height: 2em;
   }
-  #searched-movies div {
-    /* display: flex; */
-    width: 186px;
-    gap: 1em;
-  }
+
   #searched-movies div {
     width: 186px;
   }
