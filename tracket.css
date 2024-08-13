@@ -10,6 +10,7 @@
   /* border: 1px solid red; */
   font-family: "Roboto";
   box-sizing: border-box;
+  border: 1px solid red;
 }
 
 body::-webkit-scrollbar {
@@ -82,10 +83,7 @@ div:has(.searchbar) {
   position: relative;
   display: flex;
   align-items: center;
-}
-
-.currently-watching li a img {
-  animation: skeleton-loading 1s linear infinite alternate;
+  width: 200px;
 }
 
 .currently-watching li p {
@@ -100,13 +98,15 @@ div:has(.searchbar) {
 }
 
 .currently-watching li a img {
+  height: 300px;
   border-radius: 10px;
   width: 200px;
+  animation: skeleton-loading 1s linear infinite alternate;
 }
 
-.currently-watching li::after(third) {
+/* .currently-watching li::after(third) {
   display: none;
-}
+} */
 .currently-watching li:hover img {
   opacity: 0.8;
   height: 100%;
@@ -148,20 +148,22 @@ div:has(.searchbar) {
   font-size: 12px;
 }
 
-.suggestions li img {
+.suggestions li a img {
   height: 304px;
   border-radius: 10px;
   width: 200px;
-  height: 100%;
+  animation: skeleton-loading 1s linear infinite alternate;
 }
 
 .previously-watched {
   display: flex;
-  gap: 02rem;
+  gap: 2rem;
   overflow-x: scroll;
   flex-wrap: nowrap;
   padding-right: 0px;
   width: 98vw;
+  margin-bottom: 0%;
+
   /* border: 1px solid red; */
 }
 
@@ -177,6 +179,7 @@ div:has(.searchbar) {
   border-radius: 12px;
   display: flex;
   align-items: center;
+  /* animation: skeleton-loading 1s linear infinite alternate; */
 }
 
 .previously-watched li p {
@@ -190,11 +193,10 @@ div:has(.searchbar) {
   opacity: 0;
 }
 
-.previously-watched li img {
-  height: 304px;
+.previously-watched li a img {
+  height: 300px;
   border-radius: 10px;
   width: 200px;
-  height: 100%;
   animation: skeleton-loading 1s linear infinite alternate;
 }
 
@@ -233,12 +235,11 @@ div:has(.searchbar) {
 
 #searched-movies {
   margin-top: 1em;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  display: none;
+  grid-template-columns: repeat(auto-fill, minmax(198px, 1fr));
   gap: 1rem;
   padding: 0 auto;
   justify-items: center;
-  padding: 0;
 }
 
 #searched-movies div {
@@ -341,5 +342,11 @@ div:has(.searchbar) {
 
   #searched-movies div {
     width: 186px;
+  }
+  #searched-movies {
+    margin-top: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  #search-movie::before {
   }
 }

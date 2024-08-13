@@ -166,8 +166,10 @@ search.addEventListener("input", async (e) => {
       // don't disply error text
       errorText.textContent = "";
     }
+    searchedMoviesContainer.style.display = "none";
 
     searchResults.forEach((movie) => {
+      // document.querySelector("p.clear").classList.toggle("clear");
       searchedMoviesContainer.style.display = "grid";
 
       let poster_path = movie.poster_path;
