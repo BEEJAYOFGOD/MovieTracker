@@ -251,6 +251,9 @@ div:has(.searchbar) {
 
 .clear {
   display: none;
+  visibility: hidden;
+  height: 0;
+  width: 0;
 }
 
 #error-text {
@@ -263,7 +266,7 @@ div:has(.searchbar) {
     background-color: hsl(200, 10%, 82%);
   }
   100% {
-    background-color: hsl(24, 88%, 47%);
+    background-color: hsl(24, 2%, 49%);
   }
 }
 
@@ -316,22 +319,30 @@ div:has(.searchbar) {
   .flex-posters li a img {
     max-width: 186px;
   }
-  
-.flex-posters::-webkit-scrollbar {
-  /* background: red; */
-  border-radius: 12px;
-  height: 4px;
-  width: 500px;
-}
-.flex-posters::-webkit-scrollbar-track {
-  /* background: green; */
-  border-radius: 12px;
-}
-.flex-posters::-webkit-scrollbar-thumb {
-  box-shadow: inset 0 0 5px grey;
-  height: 2px;
-  /* background: yellow; */
-  border-radius: 12px;
-  max-height: 2em;
-}
+
+  .flex-posters::-webkit-scrollbar {
+    /* background: red; */
+    border-radius: 12px;
+    height: 4px;
+    width: 500px;
+  }
+  .flex-posters::-webkit-scrollbar-track {
+    /* background: green; */
+    border-radius: 12px;
+  }
+  .flex-posters::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 5px grey;
+    height: 2px;
+    /* background: yellow; */
+    border-radius: 12px;
+    max-height: 2em;
+  }
+  #searched-movies div {
+    /* display: flex; */
+    width: 186px;
+    gap: 1em;
+  }
+  #searched-movies div {
+    width: 186px;
+  }
 }

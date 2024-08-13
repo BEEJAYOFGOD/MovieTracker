@@ -145,7 +145,7 @@ search.addEventListener("input", async (e) => {
       .classList.toggle("clear", searchResults.length > 0);
     //** End of code
 
-    let errorText = document.createElement("div");
+    let errorText = document.createElement("section");
 
     if (searchResults.length == 0 && searchQuery.length > 0) {
       // if search results is empty and there's a query (whether empty or not)
