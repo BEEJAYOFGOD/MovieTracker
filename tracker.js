@@ -167,10 +167,8 @@ search.addEventListener("input", async (e) => {
       errorText.textContent = "";
       searchedMoviesContainer.style.display = "none";
     }
-    searchResults = searchResults.filter((movie) => {
-      movie.poster_path !== null;
-    });
-    console.log(nully);
+    searchResults = searchResults.filter((movie) => movie.poster_path !== null);
+    console.log(searchResults);
 
     console.log(searchResults);
     searchResults.forEach((movie) => {
@@ -193,5 +191,9 @@ search.addEventListener("input", async (e) => {
     });
 
     // console.log(searchedMoviesContainer.innerHTML);
-  } catch (error) {}
+  } catch (error) {
+    // searchedMoviesContainer.style.display = "flex";
+    // console.error("Error fetching search results:", error);
+    // // searchedMoviesContainer.innerHTML = `<p id="error-text">An error occurred maybe due to network. Please try again later.</p>`;
+  }
 });
