@@ -165,6 +165,7 @@ search.addEventListener("input", async (e) => {
       // when the user doesn't input anything on the searchbar
       // don't disply error text
       errorText.textContent = "";
+      searchedMoviesContainer.style.display = "none"
     }
 
     searchResults.forEach((movie) => {
