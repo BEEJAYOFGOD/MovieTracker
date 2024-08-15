@@ -13,10 +13,25 @@
   /* border: 1px solid red; */
 }
 
-body::-webkit-scrollbar {
-  color: red;
-  font-weight: 800;
-  /* display: none; */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(107, 105, 105);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
 }
 
 body {
@@ -188,8 +203,9 @@ div:has(.searchbar) {
 .previously-watched li a img {
   width: 15vw;
   border-radius: 10px;
-
+  height: 100%;
   animation: skeleton-loading 1s linear infinite alternate;
+  /* border: 1px solid red; */
 }
 
 .previously-watched li:hover img {
@@ -285,6 +301,10 @@ div:has(.searchbar) {
     /* color: hsl(220, 2%, 27%); */
     animation: skeleton-loading 1s linear infinite alternate;
   }
+  body {
+    padding: 0%;
+    margin: 0%;
+  }
   .main {
     display: flex;
     flex-direction: column;
@@ -297,8 +317,15 @@ div:has(.searchbar) {
     /* border: 1px solid red; */
   }
 
+  .currently-watching li {
+  }
+
+  .currently-watching li a {
+    width: 100%;
+  }
   .currently-watching li a img {
     width: 100%;
+
     animation: skeleton-loading 1s linear infinite alternate;
   }
 
@@ -309,7 +336,7 @@ div:has(.searchbar) {
     /* border: 1px solid red; */
   }
   .suggestions {
-    width: 100vw;
+    width: 100%;
     overflow-x: auto;
   }
 
@@ -318,7 +345,7 @@ div:has(.searchbar) {
   }
 
   .previously-watched {
-    width: 100vw;
+    width: 100%;
   }
   .previously-watched li a img {
     width: 48vw;

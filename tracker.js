@@ -165,9 +165,14 @@ search.addEventListener("input", async (e) => {
       // when the user doesn't input anything on the searchbar
       // don't disply error text
       errorText.textContent = "";
-      searchedMoviesContainer.style.display = "none"
+      searchedMoviesContainer.style.display = "none";
     }
+    searchResults = searchResults.filter((movie) => {
+      movie.poster_path !== null;
+    });
+    console.log(nully);
 
+    console.log(searchResults);
     searchResults.forEach((movie) => {
       // document.querySelector("p.clear").classList.toggle("clear");
       searchedMoviesContainer.style.display = "grid";

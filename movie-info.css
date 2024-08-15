@@ -75,8 +75,13 @@ video {
   width: 300px;
   border: 1px solid red;
 }
+.genres {
+  display: flex;
+  gap: 0.2rem;
+}
 
 .genres button {
+  flex-wrap: wrap;
   border: 5px solid black;
   border-radius: 20px;
   padding: 8px 15px;
@@ -114,5 +119,21 @@ iframe {
   }
   100% {
     border: 3px solid hsl(210, 1%, 31%);
+  }
+}
+
+@media (max-width: 750px) {
+  .trailer-container {
+    width: 100vw;
+    aspect-ratio: 16 / 9;
+    padding: 20em;
+  }
+  *{
+    display: inline;
+  }
+  iframe {
+    width: 80vw;
+    border: 1px solid red;
+    aspect-ratio: 16 / 9;
   }
 }
