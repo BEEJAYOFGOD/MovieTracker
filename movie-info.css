@@ -63,11 +63,8 @@ div:has(.searchbar) {
 section {
   display: flex;
   justify-content: space-between;
-}
-
-video {
-  border-radius: 12px;
-  margin-top: 1rem;
+  gap: 12em;
+  width: 95vw;
 }
 
 .poster-container img {
@@ -77,7 +74,6 @@ video {
 
 .tola {
   width: 300px;
-  border: 1px solid red;
 }
 .genres {
   display: flex;
@@ -113,6 +109,14 @@ iframe {
   margin-top: 1em;
   font-weight: bold;
 }
+.trailer-container {
+  width: 50vw;
+  aspect-ratio: 16 /9;
+}
+.trailer-container iframe {
+  width: 100%;
+  height: 100%;
+}
 
 @keyframes skeleton-loading {
   0% {
@@ -129,16 +133,17 @@ iframe {
 @media (max-width: 750px) {
   .trailer-container {
     width: 100%;
-    /* border: 1px solid red; */
-    border-radius: 0%;
+    aspect-ratio: 16 /9;
   }
+
   * {
     display: inline;
   }
   iframe {
     width: 100%;
+    /* width: 100%; */
     /* border: 1px solid red; */
-    aspect-ratio: 16 / 9;
+    height: 100%;
   }
   section {
     flex-direction: column-reverse;
@@ -148,17 +153,15 @@ iframe {
   }
   .movie-info {
     flex-direction: column;
-    /* border: 1px solid red; */
     margin-top: 2rem;
     width: 100%;
     margin-bottom: 200%;
   }
   .poster-container {
-    /* border: 1px solid red; */
     position: absolute;
     /* height: 200px; */
     width: 130px;
-    top: 21em;
+    top: 19em;
     left: 2rem;
   }
   .poster-container img {
@@ -166,7 +169,6 @@ iframe {
   }
   .IMDB {
     display: flex;
-
     flex-direction: column;
     gap: 0.2em;
     align-items: center;
