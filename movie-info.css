@@ -122,13 +122,17 @@ iframe {
   }
 }
 
+* {
+  border: 1px solid red;
+}
+
 @media (max-width: 750px) {
   .trailer-container {
     width: 100vw;
     aspect-ratio: 16 / 9;
     padding: 20em;
   }
-  *{
+  * {
     display: inline;
   }
   iframe {
