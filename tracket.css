@@ -371,13 +371,23 @@ div:has(.searchbar) {
   }
 
   #searched-movies div {
-    width: 45vw;
-    border: 1px solid red;
+    /* width: 45vw; */
+    aspect-ratio: 2 / 3;
+    /* border: 1px solid red; */
+    /* border: 1px solid red; */
+  }
+  #searched-movies * {
+    /* border: 1px solid red; */
   }
   #searched-movies {
-    margin-top: 2em;
+    /* min-width: 40vw; */
     /* border: 1px solid red; */
-    grid-template-columns: repeat(auto-fill, 47.2vw);
+    margin-top: 2em;
+    gap: 1em;
+    width: 100%;
+    /* border: 1px solid red; */
+    grid-template-columns: repeat(auto-fill, 47vw);
+    justify-items: center;
   }
   #search-movie::before {
   }
