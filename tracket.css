@@ -383,7 +383,7 @@ div:has(.searchbar) {
     /* min-width: 40vw; */
     /* border: 1px solid red; */
     margin-top: 2em;
-    gap: 1em;
+    gap: 1.2em;
     width: 100%;
     /* border: 1px solid red; */
     grid-template-columns: repeat(auto-fill, 47vw);
