@@ -371,11 +371,13 @@ div:has(.searchbar) {
   }
 
   #searched-movies div {
-    width: 186px;
+    width: 45vw;
+    border: 1px solid red;
   }
   #searched-movies {
     margin-top: 2em;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    /* border: 1px solid red; */
+    grid-template-columns: repeat(auto-fill, 47.2vw);
   }
   #search-movie::before {
   }
