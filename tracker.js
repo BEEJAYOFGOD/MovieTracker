@@ -192,8 +192,10 @@ search.addEventListener("input", async (e) => {
 
     // console.log(searchedMoviesContainer.innerHTML);
   } catch (error) {
-    // searchedMoviesContainer.style.display = "flex";
-    // console.error("Error fetching search results:", error);
-    // // searchedMoviesContainer.innerHTML = `<p id="error-text">An error occurred maybe due to network. Please try again later.</p>`;
+    document.querySelector(".hide").style.display = "none";
+    document.querySelector("#stubborn").style.display = "none";
+    searchedMoviesContainer.style.display = "flex";
+    console.error("Error fetching search results:", error);
+    searchedMoviesContainer.innerHTML = `<p id="error-text">An error occurred maybe due to network. Please try again later.</p>`;
   }
 });

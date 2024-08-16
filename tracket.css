@@ -247,13 +247,11 @@ div:has(.searchbar) {
   display: none;
   grid-template-columns: repeat(auto-fill, minmax(198px, 1fr));
   gap: 1rem;
-  border: 1px solid red;
   padding: 0 auto;
   justify-items: center;
 }
 
 #searched-movies div {
-  border: 1px solid red;
   background-size: cover;
   height: 300px;
   width: 200px;
@@ -270,7 +268,6 @@ div:has(.searchbar) {
 }
 
 #error-text {
-  border: 1px solid red;
   margin: auto;
   font-size: 2em;
   text-align: center;
