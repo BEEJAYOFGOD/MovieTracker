@@ -321,8 +321,6 @@ div:has(.searchbar) {
     width: 100%;
   }
 
-  .currently-watching li {
-  }
 
   .currently-watching li a {
     width: 100%;
@@ -380,14 +378,10 @@ div:has(.searchbar) {
 
   #searched-movies div {
     aspect-ratio: 2 / 3;
-    border: 1px solid red;
   }
 
   #searched-movies {
-    /* width: 100%;bor */
+    gap: 1.5em;
     grid-template-columns: repeat(auto-fill, minmax(47vw, 1fr));
-    border: 1px solid red;
-  }
-  #search-movie::before {
   }
 }

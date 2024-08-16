@@ -1,5 +1,8 @@
 body {
-  padding: 2rem;
+  margin: 1em;
+}
+html {
+  padding: 1em;
 }
 .header {
   display: flex;
@@ -48,13 +51,14 @@ div:has(.searchbar) {
 }
 .ratings {
   display: flex;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   align-items: center;
   line-height: 0.2rem;
 }
 
 .overview {
   min-width: 400px;
+  /* margin-top: 20em; */
 }
 section {
   display: flex;
@@ -122,22 +126,61 @@ iframe {
   }
 }
 
-* {
-  border: 1px solid red;
-}
-
 @media (max-width: 750px) {
   .trailer-container {
-    width: 100vw;
-    aspect-ratio: 16 / 9;
-    padding: 20em;
+    width: 100%;
+    /* border: 1px solid red; */
+    border-radius: 0%;
   }
   * {
     display: inline;
   }
   iframe {
-    width: 80vw;
-    border: 1px solid red;
+    width: 100%;
+    /* border: 1px solid red; */
     aspect-ratio: 16 / 9;
+  }
+  section {
+    flex-direction: column-reverse;
+  }
+  .watchlist {
+    display: none;
+  }
+  .movie-info {
+    flex-direction: column;
+    /* border: 1px solid red; */
+    margin-top: 2rem;
+    width: 100%;
+    margin-bottom: 200%;
+  }
+  .poster-container {
+    /* border: 1px solid red; */
+    position: absolute;
+    /* height: 200px; */
+    width: 130px;
+    top: 21em;
+    left: 2rem;
+  }
+  .poster-container img {
+    width: 100%;
+  }
+  .IMDB {
+    display: flex;
+
+    flex-direction: column;
+    gap: 0.2em;
+    align-items: center;
+  }
+  .IMDB p {
+    margin-top: 0em;
+  }
+  .ratings {
+    gap: 1em;
+    margin-top: 2em;
+    width: 50%;
+  }
+
+  .genres {
+    margin-bottom: 1.2em;
   }
 }
