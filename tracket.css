@@ -306,7 +306,7 @@ div:has(.searchbar) {
   }
 
   body {
-    padding: 0%;
+    padding: 0.19em;
     margin: 0%;
   }
 
@@ -380,12 +380,10 @@ div:has(.searchbar) {
   }
 
   #searched-movies {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     gap: 2em;
-    grid-template-columns: repeat(auto-fill, minmax(45vw, 1fr));
-  }
-  #searched-movies div {
-    border: 1px solid red;
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    overflow: hidden;
   }
 }
