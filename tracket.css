@@ -376,20 +376,13 @@ div:has(.searchbar) {
     max-height: 2em;
   }
 
-  #searched-movies div {
-    aspect-ratio: 2 / 3;
-  }
-
   #searched-movies {
     /* border: 1px solid red; */
+    overflow: hidden;
     width: 100%;
     gap: 2em;
     row-gap: 0.5em;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     overflow: hidden;
-  }
-  #searched-movies {
-    /* width: 150px; */
-    /* aspect-ratio: 2 / 3; */
   }
 }
