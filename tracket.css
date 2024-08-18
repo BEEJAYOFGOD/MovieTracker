@@ -321,7 +321,6 @@ div:has(.searchbar) {
     width: 100%;
   }
 
-
   .currently-watching li a {
     width: 100%;
   }
@@ -381,7 +380,12 @@ div:has(.searchbar) {
   }
 
   #searched-movies {
-    gap: 1.5em;
-    grid-template-columns: repeat(auto-fill, minmax(47vw, 1fr));
+    border: 1px solid red;
+    width: 100%;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(45vw, 1fr));
+  }
+  #searched-movies div {
+    border: 1px solid red;
   }
 }

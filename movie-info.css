@@ -147,6 +147,7 @@ iframe {
   }
   section {
     flex-direction: column-reverse;
+    gap: 0em;
   }
   .watchlist {
     display: none;
@@ -155,7 +156,7 @@ iframe {
     flex-direction: column;
     margin-top: 2rem;
     width: 100%;
-    margin-bottom: 200%;
+    /* margin-bottom: 200%; */
   }
   .poster-container {
     position: absolute;
@@ -183,6 +184,6 @@ iframe {
   }
 
   .genres {
-    margin-bottom: 1.2em;
+    /* margin-bottom: 1.2em; */
   }
 }
