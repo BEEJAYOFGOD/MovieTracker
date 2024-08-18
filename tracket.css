@@ -307,7 +307,7 @@ div:has(.searchbar) {
   }
 
   body {
-    padding: 0.19em;
+    /* padding: 0.19em; */
     margin: 0%;
   }
 
