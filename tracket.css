@@ -245,13 +245,14 @@ div:has(.searchbar) {
   width: 100%;
   margin-top: 1em;
   display: none;
-  grid-template-columns: repeat(auto-fill, minmax(198px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(189px, 1fr));
   gap: 1rem;
   padding: 0 auto;
   justify-items: center;
 }
 
 #searched-movies div {
+  /* border: 1px solid red; */
   background-size: cover;
   height: 300px;
   width: 200px;
@@ -383,7 +384,12 @@ div:has(.searchbar) {
     /* border: 1px solid red; */
     width: 100%;
     gap: 2em;
-    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    row-gap: 0.5em;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     overflow: hidden;
+  }
+  #searched-movies {
+    /* width: 150px; */
+    /* aspect-ratio: 2 / 3; */
   }
 }
