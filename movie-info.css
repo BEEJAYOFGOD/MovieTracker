@@ -161,9 +161,9 @@ iframe {
   .poster-container {
     position: absolute;
     /* height: 200px; */
-    width: 130px;
-    top: 15em;
-    left: 2rem;
+    width: 20vw;
+    top: 22rem;
+    left: 2.2rem;
   }
   .poster-container img {
     width: 100%;
@@ -181,9 +181,5 @@ iframe {
     gap: 1em;
     margin-top: 2em;
     width: 50%;
-  }
-
-  .genres {
-    /* margin-bottom: 1.2em; */
   }
 }
