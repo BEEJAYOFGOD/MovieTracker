@@ -166,8 +166,8 @@ iframe {
   .poster-container {
     position: absolute;
     padding-bottom: 0%;
-    width: 20vw;
-    top: 280px;
+    width: 30vw;
+    top: 220px;
     left: 18px;
     display: flex;
     border-radius: 18px;
