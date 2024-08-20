@@ -194,8 +194,7 @@ iframe {
     display: none;
   }
 
-  main {
-    padding: 0%;
-    border: 1px solid grey;
+  body {
+    padding: 2.5%;
   }
 }
