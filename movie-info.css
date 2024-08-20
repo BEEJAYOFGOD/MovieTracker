@@ -1,8 +1,13 @@
-body {
+/* body {
   margin: 1em;
-}
-html {
+} */
+/* html {
   padding: 1em;
+} */
+html,
+body {
+  padding: 0em;
+  margin: 0em;
 }
 .header {
   display: flex;
@@ -57,14 +62,13 @@ div:has(.searchbar) {
 }
 
 .overview {
-  min-width: 400px;
+  -width: 400px;
   /* margin-top: 20em; */
 }
 section {
   display: flex;
   justify-content: space-between;
   gap: 12em;
-  width: 95vw;
 }
 
 .poster-container img {
@@ -131,14 +135,14 @@ iframe {
 }
 
 @media (max-width: 750px) {
+  * {
+    box-sizing: border-box;
+  }
   .trailer-container {
     width: 100%;
     aspect-ratio: 16 /9;
   }
 
-  * {
-    display: inline;
-  }
   iframe {
     width: 100%;
     /* width: 100%; */
@@ -156,19 +160,20 @@ iframe {
     flex-direction: column;
     margin-top: 2rem;
     width: 100%;
+    /* position: relative; */
     /* margin-bottom: 200%; */
   }
   .poster-container {
     position: absolute;
     padding-bottom: 0%;
     width: 20vw;
-    top: 23rem;
-    left: 2.2rem;
+    top: 280px;
+    left: 18px;
+    display: flex;
+    border-radius: 18px;
   }
   .poster-container img {
     width: 100%;
-    height: 100%;
-    border: 1px solid green;
   }
   .IMDB {
     display: flex;
@@ -184,10 +189,13 @@ iframe {
     margin-top: 2em;
     width: 50%;
   }
+
   .searchbar {
     display: none;
   }
-  * {
-    border: 1px solid red;
+
+  main {
+    padding: 0%;
+    border: 1px solid grey;
   }
 }

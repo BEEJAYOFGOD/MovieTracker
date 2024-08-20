@@ -102,6 +102,7 @@ div:has(.searchbar) {
   position: relative;
   display: flex;
   align-items: center;
+
   /* width: 200px; */
 }
 
@@ -117,7 +118,6 @@ div:has(.searchbar) {
 }
 
 .currently-watching li a img {
-  /* border: 1px solid red; */
   width: 14vw;
   aspect-ratio: 2 / 3;
   border-radius: 10px;
