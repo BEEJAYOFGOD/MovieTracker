@@ -160,13 +160,15 @@ iframe {
   }
   .poster-container {
     position: absolute;
-    /* height: 200px; */
+    padding-bottom: 0%;
     width: 20vw;
-    top: 20rem;
+    top: 23rem;
     left: 2.2rem;
   }
   .poster-container img {
     width: 100%;
+    height: 100%;
+    border: 1px solid green;
   }
   .IMDB {
     display: flex;
@@ -181,5 +183,11 @@ iframe {
     gap: 1em;
     margin-top: 2em;
     width: 50%;
+  }
+  .searchbar {
+    display: none;
+  }
+  * {
+    border: 1px solid red;
   }
 }
