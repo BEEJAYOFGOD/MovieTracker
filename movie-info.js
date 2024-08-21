@@ -39,7 +39,7 @@ async function getMovie() {
     document.querySelector(".genres").innerHTML += btn;
   });
 
-  console.log(movieData);
+  //   console.log(movieData);
 }
 
 getMovie();
@@ -74,3 +74,45 @@ async function getTrailer() {
 }
 
 getTrailer();
+
+let iframe = document.querySelector("#frame");
+// const iframeDocument = iframe.contentDocument;
+
+// Wait for the iframe content to load
+// JavaScript
+
+// iframe.addEventListener("click", function () {
+//   // Check if the iframe is already playing
+//   if (!iframe.contentWindow.paused) {
+//     console.log("Video is already playing");
+//     return;
+//   }
+
+//   // Get the iframe's contentWindow object
+//   const iframeWindow = iframe.contentWindow;
+
+//   // Get the video element inside the iframe
+//   const iframeDoc = iframeWindow.document;
+//   const videoElement = iframeDoc.querySelector("video");
+
+//   // Play the video
+//   videoElement.play();
+
+//   console.log("Video started playing");
+// });
+
+let trailer_container = document.querySelector(".trailer-container");
+
+trailer_container.addEventListener("mouseover", () => {
+  if (window.innerWidth <= 768) {
+    document.querySelector(".poster-container").style.height = 0;
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) {
+    poster_container.style.display = "flex";
+  }
+});
+
+poster_container.style.display = "flex";

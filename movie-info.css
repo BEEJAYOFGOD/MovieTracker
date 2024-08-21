@@ -72,7 +72,7 @@ section {
 }
 
 .poster-container img {
-  width: 200px;
+  width: 18vw;
   border-radius: 20px;
 }
 
@@ -101,6 +101,11 @@ body {
 iframe {
   border-radius: 30px;
 }
+
+* {
+  /* border: 1px solid red; */
+}
+
 .watchlist {
   display: flex;
   justify-content: center;
@@ -114,6 +119,8 @@ iframe {
   font-weight: bold;
 }
 .trailer-container {
+  border-radius: 28px;
+  /* border: 1px solid red; */
   width: 50vw;
   aspect-ratio: 16 /9;
 }
@@ -134,7 +141,7 @@ iframe {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   * {
     box-sizing: border-box;
   }
@@ -190,6 +197,9 @@ iframe {
     width: 50%;
   }
 
+  * {
+    /* border: 1px solid red; */
+  }
   .searchbar {
     display: none;
   }
