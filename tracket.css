@@ -350,6 +350,7 @@ div:has(.searchbar) {
 
   .previously-watched {
     width: 100%;
+    margin-bottom: 0.5em;
   }
 
   .previously-watched li a img {
@@ -384,5 +385,8 @@ div:has(.searchbar) {
     row-gap: 0.5em;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     overflow: hidden;
+  }
+  #searched-movies div:hover:before {
+    transform: scale(1.2);
   }
 }
